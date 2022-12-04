@@ -20,170 +20,301 @@
     <link rel="stylesheet" href="./output.css" />
     <title>Frontend Mentor | [Blogr]</title>
   </head>
-  <body>
-    <header>
-      <div class="container">
-        <div>
+  <body
+    class="text-base md:text-lg lg:text-xl xl:text-2xl font-overpass max-w-[1519px] mx-auto"
+  >
+    <header class="bg-intro-bg pt-10 rounded-bl-[5rem]">
+      <div class="container px-4 md:px-8 lg:px-16 mx-auto">
+        <div
+          class="flex justify-between md:justify-start md:gap-4 items-center relative"
+        >
           <img src="./images/logo.svg" alt="Blogr Logo" />
-          <div>
-            <nav>
-              <ul>
-                <li>
-                  <a href="">Product</a>
-                  <ul>
-                    <li><a href="">Overview</a></li>
-                    <li><a href="">Pricing</a></li>
-                    <li><a href="">Marketplace</a></li>
-                    <li><a href="">Features</a></li>
-                    <li><a href="">Integrations</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="">Company</a>
-                  <ul>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Team</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Careers</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="">Connect</a>
-                  <ul>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Newsletter</a></li>
-                    <li><a href="">LinkedIn</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-            <div>
-              <a href="">Login</a>
-              <a href="">Sign Up</a>
+          <button
+            class="group md:hidden"
+            id="toggle-button"
+            aria-expanded="false"
+            aria-controls="main-nav"
+            aria-label="Menu"
+          >
+            <img
+              class="group-aria-[expanded=true]:hidden"
+              src="./images/icon-hamburger.svg"
+              alt=""
+            />
+            <img
+              class="group-aria-[expanded=false]:hidden"
+              src="./images/icon-close.svg"
+              alt=""
+            />
+          </button>
+          <nav
+            class="hidden shadow-lg md:shadow-none space-y-4 md:space-y-0 absolute md:static bg-white md:bg-none md:bg-transparent rounded-lg md:rounded-none left-4 right-4 top-14 px-4 py-8 text-center md:flex md:justify-between md:flex-1 md:py-0"
+            id="main-nav"
+            aria-label="Main"
+          >
+            <ul
+              class="space-y-4 md:flex md:justify-between md:space-y-0 md:items-center"
+            >
+              <li class="subnav">
+                <a
+                  class="text-veryDarkBlue md:text-white font-bold group hover:underline"
+                  aria-haspopup="true"
+                  aria-label="submenu"
+                  aria-expanded="false"
+                  href="#"
+                  >Product<img
+                    class="inline-block ml-2 group-aria-expanded:rotate-180"
+                    src="./images/icon-arrow-dark.svg"
+                    aria-hidden="true"
+                    alt=""
+                /></a>
+                <ul
+                  class="bg-grayishBlue space-y-4 py-4 text-veryDarkBlue font-bold hidden"
+                >
+                  <li><a class="hover:underline" href="#">Overview</a></li>
+                  <li><a class="hover:underline" href="#">Pricing</a></li>
+                  <li><a class="hover:underline" href="#">Marketplace</a></li>
+                  <li><a class="hover:underline" href="#">Features</a></li>
+                  <li><a class="hover:underline" href="#">Integrations</a></li>
+                </ul>
+              </li>
+              <li class="subnav">
+                <a
+                  class="text-veryDarkBlue md:text-white font-bold group hover:underline"
+                  aria-haspopup="true"
+                  aria-label="submenu"
+                  aria-expanded="false"
+                  href="#"
+                  >Company<img
+                    class="inline-block ml-2 group-aria-expanded:rotate-180"
+                    src="./images/icon-arrow-dark.svg"
+                    aria-hidden="true"
+                    alt=""
+                /></a>
+                <ul
+                  class="bg-grayishBlue space-y-4 py-4 text-veryDarkBlue font-bold hidden"
+                >
+                  <li><a class="hover:underline" href="#">About</a></li>
+                  <li><a class="hover:underline" href="#">Team</a></li>
+                  <li><a class="hover:underline" href="#">Blog</a></li>
+                  <li><a class="hover:underline" href="#">Careers</a></li>
+                </ul>
+              </li>
+              <li class="subnav">
+                <a
+                  class="text-veryDarkBlue md:text-white font-bold group hover:underline"
+                  aria-haspopup="true"
+                  aria-label="submenu"
+                  aria-expanded="false"
+                  href="#"
+                  >Connect<img
+                    class="inline-block ml-2 group-aria-expanded:rotate-180"
+                    src="./images/icon-arrow-dark.svg"
+                    aria-hidden="true"
+                    alt=""
+                /></a>
+                <ul
+                  class="bg-grayishBlue space-y-4 py-4 text-veryDarkBlue font-bold hidden"
+                >
+                  <li><a class="hover:underline" href="#">Contact</a></li>
+                  <li><a class="hover:underline" href="#">Newsletter</a></li>
+                  <li><a class="hover:underline" href="#">LinkedIn</a></li>
+                </ul>
+              </li>
+            </ul>
+            <hr />
+            <div class="flex flex-col gap-4 md:flex-row md:items-center">
+              <a
+                class="text-veryDarkBlue md:text-white font-bold hover:underline"
+                href="#"
+                >Login</a
+              >
+              <a
+                class="inline-block bg-intro-bg rounded-full text-white px-4 py-2 font-bold w-fit mx-auto hover:bg-none hover:outline-4 hover:border-lightRed hover:text-lightRed md:text-lightRed md:bg-none md:bg-white md:hover:bg-opacity-50 md:hover:text-white"
+                href="#"
+                >Sign Up</a
+              >
             </div>
-          </div>
+          </nav>
         </div>
-        <div>
-          <h1>A modern publishing platform</h1>
-          <p>Grow your audience and build your online brand</p>
-          <div>
-            <a href="">Start for Free</a>
-            <a href="">Learn More</a>
+        <div class="text-center py-16 md:py-24 lg:py-32">
+          <h1 class="text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+            A modern publishing platform
+          </h1>
+          <p class="text-white mt-4">
+            Grow your audience and build your online brand
+          </p>
+          <div class="mt-8 space-x-4">
+            <a
+              class="text-lightRed bg-white px-4 py-2 inline-block font-bold rounded-full hover:bg-opacity-50 hover:text-white"
+              href="#"
+              aria-label="Start free with our platform"
+              >Start for Free</a
+            >
+            <a
+              class="text-white font-bold border-white border-[1px] border-solid rounded-full px-4 py-2 inline-block hover:bg-white hover:text-lightRed"
+              href="#"
+              aria-label="Learn more about our platform"
+              >Learn More</a
+            >
           </div>
         </div>
       </div>
     </header>
     <main>
-      <section>
-        <h2>Designed for the future</h2>
-        <div>
-          <div>
-            <div>
-              <h3>Introducing an extensible editor</h3>
-              <p>
-                Blogr features an exceedingly intuitive interface which lets you
-                focus on one thing: creating content. The editor supports
-                management of multiple blogs and allows easy manipulation of
-                embeds such as images, videos, and Markdown. Extensibility with
-                plugins and themes provide easy ways to add functionality or
-                change the looks of a blog.
-              </p>
+      <div class="container px-4 md:px-8 lg:px-16 mx-auto">
+        <section class="text-center my-24">
+          <h2
+            class="text-veryDarkBlue font-bold text-3xl lg:text-4xl my-8 lg:text-center"
+          >
+            Designed for the future
+          </h2>
+          <div class="grid grid-cols-1 lg:grid-cols-2 lg:text-left lg:gap-4">
+            <div class="my-8 space-y-8">
+              <div class="">
+                <h3
+                  class="text-3xl text-veryDarkBlue font-bold my-4 w-3/5 lg:w-auto lg:text-4xl mx-auto"
+                >
+                  Introducing an extensible editor
+                </h3>
+                <p>
+                  Blogr features an exceedingly intuitive interface which lets
+                  you focus on one thing: creating content. The editor supports
+                  management of multiple blogs and allows easy manipulation of
+                  embeds such as images, videos, and Markdown. Extensibility
+                  with plugins and themes provide easy ways to add functionality
+                  or change the looks of a blog.
+                </p>
+              </div>
+              <div>
+                <h3
+                  class="text-3xl text-veryDarkBlue font-bold my-4 w-3/5 mx-auto lg:w-auto lg:text-4xl"
+                >
+                  Robust content management
+                </h3>
+                <p>
+                  Flexible content management enables users to easily move
+                  through posts. Increase the usability of your blog by adding
+                  customized categories, sections, format, or flow. With this
+                  functionality, you're in full control.
+                </p>
+              </div>
             </div>
-            <div>
-              <h3>Robust content management</h3>
-              <p>
-                Flexible content management enables users to easily move through
-                posts. Increase the usability of your blog by adding customized
-                categories, sections, format, or flow. With this functionality,
-                you're in full control.
-              </p>
-            </div>
+            <picture class="-order-1 lg:order-1 mx-auto lg:my-auto">
+              <source
+                srcset="./images/illustration-editor-desktop.svg"
+                media="(min-width: 1024px)"
+              />
+              <img src="./images/illustration-editor-mobile.svg" alt="" />
+            </picture>
           </div>
+        </section>
+        <section
+          class="text-white bg-body-bg text-center my-24 mt-60 rounded-tr-[5rem] rounded-bl-[5rem] relative lg:grid lg:grid-cols-2 lg:text-left lg:gap-4 lg:my-32"
+        >
           <picture>
             <source
-              srcset="./images/illustration-editor-desktop.svg"
-              media="(min-width: 768px)"
+              srcset="./images/illustration-phones.svg"
+              media="(min-width: 1024px)"
             />
-            <img src="./images/illustration-editor-mobile.svg" alt="" />
+            <img
+              class="absolute top-[-280px] lg:top-[-75px] lg:left-[-50px]"
+              src="./images/illustration-phones.svg"
+              alt=""
+            />
           </picture>
-        </div>
-      </section>
-      <section>
-        <picture>
-          <source
-            srcset="./images/illustration-phones.svg"
-            media="(min-width: 768px)"
-          />
-          <img src="./images/illustration-phones.svg" alt="" />
-        </picture>
-        <div>
-          <h2>State of the Art Infrastructure</h2>
-          <p>
-            With reliability and speed in mind, worldwide data centers provide
-            the backbone for ultra-fast connectivity. This ensures your site
-            will load instantly, no matter where your readers are, keeping your
-            site competitive.
-          </p>
-        </div>
-      </section>
-      <section>
-        <picture>
-          <source
-            srcset="./images/illustration-laptop-desktop.svg"
-            media="(min-width: 768px)"
-          />
-          <img src="./images/illustration-laptop-mobile.svg" alt="" />
-        </picture>
-        <div>
-          <div>
-            <h3>Free, open, simple</h3>
+          <div class="px-4 py-16 pt-64 lg:pt-20">
+            <h2 class="text-4xl text-white font-bold my-4 mx-auto">
+              State of the Art Infrastructure
+            </h2>
             <p>
-              Blogr is a free and open source application backed by a large
-              community of helpful developers. It supports features such as code
-              syntax highlighting, RSS feeds, social media integration,
-              third-party commenting tools, and works seamlessly with Google
-              Analytics. The architecture is clean and is relatively easy to
-              learn.
+              With reliability and speed in mind, worldwide data centers provide
+              the backbone for ultra-fast connectivity. This ensures your site
+              will load instantly, no matter where your readers are, keeping
+              your site competitive.
             </p>
           </div>
-          <div>
-            <h3>Powerful tooling</h3>
-            <p>
-              Batteries included. We built a simple and straightforward CLI tool
-              that makes customization and deployment a breeze, but capable of
-              producing even the most complicated sites.
-            </p>
+        </section>
+        <section
+          class="text-center my-24 lg:grid lg:grid-cols-2 lg:text-left lg:gap-4 xl:pt-32"
+        >
+          <picture class="lg:my-auto">
+            <source
+              srcset="./images/illustration-laptop-desktop.svg"
+              media="(min-width: 1024px)"
+            />
+            <img
+              class="mx-auto"
+              src="./images/illustration-laptop-mobile.svg"
+              alt=""
+            />
+          </picture>
+          <div class="space-y-8">
+            <div class="px-4">
+              <h3
+                class="text-3xl text-veryDarkBlue font-bold my-4 w-3/5 mx-auto lg:w-auto lg:text-4xl"
+              >
+                Free, open, simple
+              </h3>
+              <p>
+                Blogr is a free and open source application backed by a large
+                community of helpful developers. It supports features such as
+                code syntax highlighting, RSS feeds, social media integration,
+                third-party commenting tools, and works seamlessly with Google
+                Analytics. The architecture is clean and is relatively easy to
+                learn.
+              </p>
+            </div>
+            <div class="px-4">
+              <h3
+                class="text-3xl text-veryDarkBlue font-bold my-4 w-3/5 mx-auto lg:w-auto lg:text-4xl"
+              >
+                Powerful tooling
+              </h3>
+              <p>
+                Batteries included. We built a simple and straightforward CLI
+                tool that makes customization and deployment a breeze, but
+                capable of producing even the most complicated sites.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div>
-        <img src="./images/logo.svg" alt="Blogr Logo" />
+        </section>
       </div>
-      <nav>
+    </main>
+    <footer
+      class="bg-veryDarkBlackBlue rounded-tr-[5rem] text-grayishBlue text-center md:text-left py-16 md:flex md:justify-between md:px-24 lg:justify-around xl:justify-start xl:gap-32 xl:px-48"
+    >
+      <div>
+        <img class="mb-8 mx-auto" src="./images/logo.svg" alt="Blogr Logo" />
+      </div>
+      <nav
+        class="space-y-8 md:grid md:grid-cols-3 md:gap-16 md:space-y-0 xl:gap-44"
+        id="footer-nav"
+        aria-label="Secondary"
+      >
         <ul>
-          <p>Product</p>
-          <li><a href="">Overview</a></li>
-          <li><a href="">Pricing</a></li>
-          <li><a href="">Marketplace</a></li>
-          <li><a href="">Features</a></li>
-          <li><a href="">Integrations</a></li>
+          <p class="text-white mb-4">Product</p>
+          <li><a class="hover:underline" href="#">Overview</a></li>
+          <li><a class="hover:underline" href="#">Pricing</a></li>
+          <li><a class="hover:underline" href="#">Marketplace</a></li>
+          <li><a class="hover:underline" href="#">Features</a></li>
+          <li><a class="hover:underline" href="#">Integrations</a></li>
         </ul>
         <ul>
-          <p>Company</p>
-          <li><a href="">About</a></li>
-          <li><a href="">Team</a></li>
-          <li><a href="">Blog</a></li>
-          <li><a href="">Careers</a></li>
+          <p class="text-white mb-4">Company</p>
+          <li><a class="hover:underline" href="#">About</a></li>
+          <li><a class="hover:underline" href="#">Team</a></li>
+          <li><a class="hover:underline" href="#">Blog</a></li>
+          <li><a class="hover:underline" href="#">Careers</a></li>
         </ul>
         <ul>
-          <p>Connect</p>
-          <li><a href="">Contact</a></li>
-          <li><a href="">Newsletter</a></li>
-          <li><a href="">LinkedIn</a></li>
+          <p class="text-white mb-4">Connect</p>
+          <li><a class="hover:underline" href="#">Contact</a></li>
+          <li><a class="hover:underline" href="#">Newsletter</a></li>
+          <li><a class="hover:underline" href="#">LinkedIn</a></li>
         </ul>
       </nav>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>
